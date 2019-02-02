@@ -5,11 +5,12 @@ namespace AppBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class CategoryController extends Controller
 {
     /**
-     * @Route("/category/{page}", name="category", requeriments={"page": "\d+"})
+     * @Route("/category/{page}", name="category"
      */
     public function listAction(Request $request, $page)
     {
@@ -31,13 +32,10 @@ class CategoryController extends Controller
     }
 
     /**
-     * @Route("/category/{page}", name="category_edit")
+     * @Route("/category/edit/{slug}", name="category_edit")
      */
     public function editAction(Request $request, $slug)
     {
-        // replace this example code with whatever you need
-        return $this->render('default/index.html.twig', [
-            'base_dir' => 'category',
-        ]);
+        return new Response('<html><body>Categoria  .</body></html>');
     }
 }
